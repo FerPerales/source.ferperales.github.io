@@ -2,6 +2,10 @@ $default-color: black;
 $primary-color: #BBC7CC;
 $secondary-color: #F7FAFB;
 
+h1,h2,h3,h4,h5,h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .site-footer {
   background: $secondary-color;
   border-top: #EBF2F6 1px solid;
@@ -11,23 +15,40 @@ $secondary-color: #F7FAFB;
   font-size: 14px;
   left:0;
   line-height: 1.7em;
-  margin: 6rem 0 0 0;
   padding: 3rem 0;
   position: relative;
   text-align: center;
   width:100%;
 }
+
+.active-option {
+  font-weight: bold;
+  text-decoration: underline !important;
+}
+
+.genericon {
+  color: black;
+}
+
 .content {
   width: 70%;
+  min-height: 500px;
   text-align: center;
   margin: 50px auto;
+  font-family: Georgia, serif;
 }
+
+.content a {
+  color: black;
+  font-weight: bold;
+}
+
 .content ul{
   list-style-type: none;
 }
 
 .undecorated-link {
-  text-decoration: none !important;
+  text-decoration: none;
   color: $primary-color !important;
 }
 
@@ -60,6 +81,7 @@ $secondary-color: #F7FAFB;
   display: inline-block;
   width: 100%;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .screen-reader-text {
@@ -100,6 +122,7 @@ navbar {
 
 .social-list li {
   display: inline;
+  padding: 5px;
 }
 
 ul {
