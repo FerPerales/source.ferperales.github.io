@@ -6,15 +6,96 @@
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <title>
+<%= current_page.data.title || "Middleman" %>
+</title>
 
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
+    <%= stylesheet_link_tag :normalize %>
     <%= stylesheet_link_tag :site %>
+    <%= stylesheet_link_tag :genericons %>
     <%= javascript_include_tag :all %>
   </head>
 
-  <body class="<%= page_classes %>">
-    <%= yield %>
+  <body>
+    <header class='site-header'>
+      <img src="//gravatar.com/avatar/6c137ee3013821b517c4b9beed0145df/?s=120&amp;d=mm" alt="" class="header-image">
+      <h1>ferperales.net</h1>
+      <h2><%= current_page.data.title %></h2>
+      <navbar>
+        <ul class='menu'>
+          <li class='undecorated-link' >
+              <a href='/'>Home</a>
+          </li>
+          <li class='undecorated-link' >
+              <a href='/about_me'>About me</a>
+          </li>
+          <li class='undecorated-link'>
+              <a href='/skills'>Skills</a>
+          </li>
+          <li class='undecorated-link'>
+              <a href='/resume'>Resume</a>
+          </li>
+          <li class='undecorated-link'>
+              <a href='/talks'>Talks</a>
+          </li>
+          <li class='undecorated-link'>
+              <a href='/community'>Community</a>
+          </li>
+          <li class='undecorated-link'>
+              <a href='/hire_me'>Hire me</a>
+          </li>
+          <li class='undecorated-link'>
+              <a href='/contact'>Contact</a>
+          </li>
+        </ul>
+      </navbar>
+    </header>
+    <div class='content'>
+      <%= yield %>
+      <hr />
+    </div>
+    <footer>
+      <div class='social-footer'>
+        <ul class='undecorated-list social-list'>
+          <li >
+            <a href="https://www.facebook.com/ferperalesm/" class="genericon genericon-facebook" target="_blank">
+              <span class="screen-reader-text">View ferperalesm’s profile on Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/ferperalesm/" class="genericon genericon-twitter" target="_blank">
+              <span class="screen-reader-text">View ferperalesm’s profile on Twitter</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/ferperales/" class="genericon genericon-instagram" target="_blank">
+              <span class="screen-reader-text">View ferperales’s profile on Instagram</span>
+            </a>
+          </li>
+         <li>
+            <a href="https://www.linkedin.com/in/ferperales/" class="genericon genericon-linkedin" target="_blank">
+              <span class="screen-reader-text">View ferperales’s profile on LinkedIn</span>
+            </a>
+          </li>
+        <li>
+          <a href="https://github.com/ferperales/" class="genericon genericon-github" target="_blank">
+            <span class="screen-reader-text">View ferperales’s profile on GitHub</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+      <div class='personal-links site-footer'>
+        <div>
+                <a class=' undecorated-link padded-link' href='http://blog.ferperales.net'>Blog</a>
+                <a class=' undecorated-link padded-link' href='http://ferperales.net/contact'>Contact me</a>
+        </div>
+        <div class='credits undecorated-link'>
+                Theme based on Wordpress theme Fastr by Kanish
+        </div>
+      </div>
+
+    </footer>
   </body>
 </html>
