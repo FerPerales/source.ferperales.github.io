@@ -21,13 +21,13 @@ activate :cloudfront do |cf|
   cf.access_key_id = ENV['CLOUDFRONT_ACCESS_KEY']
   cf.secret_access_key = ENV['CLOUDFRONT_SECRET_ACCESS_KEY']
   cf.distribution_id = ENV['CLOUDFRONT_DISTRIBUTION_ID']
-  #cf.filter = /$^/i
+  cf.filter = /$^/i
   cf.after_build = true
 end
 
 activate :deploy do |deploy|
   deploy.method   = :git
-  deploy.remote   = ENV['GITHUB_REPO_URL']
+  deploy.remote   = 'production'
   deploy.branch   = 'master'
   deploy.build_before = true
   deploy.strategy = :submodule
