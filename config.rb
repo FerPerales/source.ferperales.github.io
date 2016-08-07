@@ -21,7 +21,7 @@ activate :cloudfront do |cf|
   cf.access_key_id = ENV['CLOUDFRONT_ACCESS_KEY']
   cf.secret_access_key = ENV['CLOUDFRONT_SECRET_ACCESS_KEY']
   cf.distribution_id = ENV['CLOUDFRONT_DISTRIBUTION_ID']
-  cf.filter = /$^/i
+  #cf.filter = /$^/i
   cf.after_build = true
 end
 
