@@ -16,8 +16,8 @@ configure :build do
 end
 
 activate :cloudfront do |cf|
-  cf.access_key_id = 'I'
-  cf.secret_access_key = 'love'
-  cf.distribution_id = 'cats'
-  # cf.after_build = false  # default is false
+  cf.access_key_id = ENV['CLOUDFRONT_ACCESS_KEY']
+  cf.secret_access_key = ENV['CLOUDFRONT_SECRET_ACCESS_KEY']
+  cf.distribution_id = ENV['CLOUDFRONT_DISTRIBUTION_ID']
+  cf.after_build = true# default is false
 end
