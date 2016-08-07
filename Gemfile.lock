@@ -292,7 +292,7 @@ PLATFORMS
 DEPENDENCIES
   middleman (~> 3.4.1)
   middleman-cloudfront
-  middleman-deploy
+  middleman-deploy (~> 1.0)
   middleman-dotenv
   middleman-gh-pages
   middleman-livereload

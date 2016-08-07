@@ -26,9 +26,9 @@ activate :cloudfront do |cf|
 end
 
 activate :deploy do |deploy|
-  deploy.method   = :git
+  deploy.deploy_method   = :git
   deploy.remote   = ENV['GITHUB_REPO_URL']
-  deploy.branch   = 'master' # default: gh-pages
-  deploy.build_before = true # default: false
+  deploy.branch   = 'master'
+  deploy.build_before = true
   deploy.strategy = :submodule
 end
