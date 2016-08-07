@@ -26,7 +26,7 @@ activate :cloudfront do |cf|
 end
 
 activate :deploy do |deploy|
-  deploy.deploy_method   = :git
+  deploy.method   = :git
   deploy.remote   = ENV['GITHUB_REPO_URL']
   deploy.branch   = 'master'
   deploy.build_before = true
