@@ -30,4 +30,5 @@ activate :deploy do |deploy|
   deploy.remote   = ENV['GITHUB_REPO_URL']
   deploy.branch   = 'master' # default: gh-pages
   deploy.build_before = true # default: false
+  deploy.strategy = :submodule
 end
