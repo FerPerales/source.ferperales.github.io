@@ -28,7 +28,7 @@ end
 activate :deploy do |deploy|
   deploy.method   = :git
   deploy.remote   = 'production'
-  deploy.branch   = 'origin/master'
+  deploy.branch   = 'master'
   deploy.build_before = true
   deploy.strategy = :submodule
 end
