@@ -14,7 +14,7 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash
-  set :asset_host, '//cloudfront.ferperales.net'
+  set :asset_host, '//d2zpwk4ru7qwcy.cloudfront.net'
 end
 
 activate :cloudfront do |cf|
