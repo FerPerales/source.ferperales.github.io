@@ -1,3 +1,5 @@
+//= require turbolinks
+
 (function(){
 	var activeOption;
 	option = window.location.pathname.split('/')[1];
