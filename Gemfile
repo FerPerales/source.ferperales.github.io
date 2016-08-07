@@ -14,3 +14,4 @@ gem 'middleman-livereload'
 gem 'middleman-gh-pages'
 gem "middleman-cloudfront"
 gem 'middleman-dotenv'
+gem 'middleman-deploy'
