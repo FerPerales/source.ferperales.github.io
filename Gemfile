@@ -14,6 +14,7 @@ gem "turbolinks", require: false
 gem 'middleman', '~> 3.4.1'
 gem 'middleman-livereload'
 gem 'middleman-gh-pages'
-gem "middleman-cloudfront"
 gem 'middleman-dotenv'
 gem 'middleman-deploy', '~> 1.0'
+gem 'middleman-s3_sync'
+gem "middleman-cloudfront"
