@@ -43,16 +43,3 @@ activate :deploy do |deploy|
   deploy.user                = ENV['SERVER_USER']
   deploy.clean               = true
 end
-
-
-activate :cloudfront do |cf|
-  cf.access_key_id              = ENV['AWS_ACCESS_KEY']
-  cf.secret_access_key          = ENV['AWS_SECRET']
-  cf.distribution_id            = ENV['CLOUDFRONT_DISTRIBUTION_ID']
-  cf.filter                     = /(.html|.xml)/
-  cf.after_build                = true
-end
-
-after_s3_sync do |files_by_status|
-  invalidate files_by_status[:updated]
-end
