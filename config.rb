@@ -6,6 +6,7 @@ activate :dotenv
 activate :directory_indexes
 activate :asset_host
 activate :deploy
+activate :gzip
 
 configure :development do
   activate :livereload
