@@ -5,6 +5,7 @@ page '/*.txt', layout: false
 activate :dotenv
 activate :directory_indexes
 activate :asset_host
+activate :deploy
 
 configure :development do
   activate :livereload
@@ -38,7 +39,7 @@ default_caching_policy max_age:(60 * 60 * 24 * 365)
 
 activate :deploy do |deploy|
   deploy.method              = :rsync
-  deploy.host                = ENV['DEPLOY_HOST']
+  deploy.host                = ENV['SERVER_HOST']
   deploy.path                = ENV['SERVER_PATH']
   deploy.user                = ENV['SERVER_USER']
   deploy.clean               = true
