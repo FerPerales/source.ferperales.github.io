@@ -77,6 +77,9 @@
         <div class='credits undecorated-link'>
                 Theme based on Wordpress theme Fastr by Kanish
         </div>
+        <div class='release-info undecorated-link'>
+          Latest release: <%= `git log -1 --format="<a target='_blank' href=\"https://github.com/FerPerales/source.ferperales.github.io/commit/%h\" />%h</a> - %B on %aD"` %>
+        </div>
       </div>
 
     </footer>
