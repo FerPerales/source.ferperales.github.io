@@ -1,3 +1,6 @@
+require 'lib/anchor'
+# helpers MarkdownHelper
+
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
@@ -36,7 +39,7 @@ activate :s3_sync do |s3_sync|
   s3_sync.index_document             = 'index.html'
 end
 caching_policy 'text/html', max_age: 0, must_revalidate: true
-default_caching_policy max_age:(60 * 60 * 24 * 365)
+default_caching_policy max_age: (60 * 60 * 24 * 365)
 
 activate :deploy do |deploy|
   deploy.method              = :rsync
@@ -45,3 +48,9 @@ activate :deploy do |deploy|
   deploy.user                = ENV['SERVER_USER']
   deploy.clean               = true
 end
+
+set :markdown_engine, :redcarpet
+set :markdown,
+    fenced_code_blocks: true,
+    smartypants: true,
+    renderer: GithubStyleTitles

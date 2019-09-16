@@ -17,4 +17,6 @@ gem 'middleman-gh-pages'
 gem 'middleman-dotenv'
 gem 'middleman-deploy', '~> 1.0'
 gem 'middleman-s3_sync'
-gem "middleman-cloudfront"
+gem 'middleman-cloudfront'
+gem 'redcarpet'
+gem 'byebug'
