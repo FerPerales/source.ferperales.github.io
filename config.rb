@@ -54,3 +54,5 @@ set :markdown,
     fenced_code_blocks: true,
     smartypants: true,
     renderer: GithubStyleTitles
+
+page '/404.html', directory_index: false
