@@ -9,15 +9,17 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 # Windows does not come with time zone data
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
-gem "turbolinks", require: false
+gem 'turbolinks', require: false
 
 # Middleman Gems
-gem 'middleman', '~> 3.4.1'
+gem 'middleman'
 gem 'middleman-livereload'
 gem 'middleman-gh-pages'
 gem 'middleman-dotenv'
-gem 'middleman-deploy', '~> 1.0'
+gem 'middleman-deploy',       '~> 2.0.0.pre.alpha'
 gem 'middleman-s3_sync'
 gem 'middleman-cloudfront'
 gem 'redcarpet'
 gem 'byebug'
+gem 'rack', '>= 2.1.4'
+

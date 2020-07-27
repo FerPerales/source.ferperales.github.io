@@ -7,8 +7,7 @@ page '/*.txt', layout: false
 
 activate :dotenv
 activate :directory_indexes
-activate :asset_host
-activate :deploy
+activate :asset_host, host:  ''
 activate :gzip
 
 configure :development do
@@ -19,7 +18,6 @@ configure :build do
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash
-  set :asset_host, ENV['ASSET_HOST']
 end
 
 activate :s3_sync do |s3_sync|
@@ -42,8 +40,8 @@ caching_policy 'text/html', max_age: 0, must_revalidate: true
 default_caching_policy max_age: (60 * 60 * 24 * 365)
 
 activate :deploy do |deploy|
-  deploy.method              = :rsync
-  deploy.host                = ENV['SERVER_HOST']
+  deploy.deploy_method       = :rsync
+  deploy.host                = "#{ENV['SERVER_USER']}@#{ENV['SERVER_HOST']}"
   deploy.path                = ENV['SERVER_PATH']
   deploy.user                = ENV['SERVER_USER']
   deploy.clean               = true
