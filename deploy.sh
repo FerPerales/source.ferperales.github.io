@@ -1,5 +1,5 @@
 #!/bin/bash
 
-middleman build &&
-middleman deploy &&
-middleman s3_sync
+bundle exec middleman build &&
+bundle exec middleman deploy &&
+bundle exec middleman s3_sync
