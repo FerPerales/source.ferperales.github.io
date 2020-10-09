@@ -12,6 +12,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'turbolinks', require: false
 
 # Middleman Gems
+gem 'kramdown', '>= 2.3.0'
 gem 'middleman'
 gem 'middleman-livereload'
 gem 'middleman-gh-pages'
