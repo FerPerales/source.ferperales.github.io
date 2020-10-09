@@ -1,0 +1,1 @@
+!function(){option=window.location.pathname.split("/")[1],""===option&&(option="home"),document.getElementById(option).setAttribute("class","active-option")}();
